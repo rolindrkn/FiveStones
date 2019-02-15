@@ -1,0 +1,47 @@
+Name: Rosalind Ng - 100286169
+Course: CPSC 1160
+
+i) how to check if there are five stones on one line and
+	the time complexity
+
+	checks by going through each row, iterating every column.
+	This includes diagonally, left and right. As well as 
+	keeping track of the longest consecutive stones. if that
+	stones has a run of at leat 5, the owner of that stone wins. 
+	The time complexity is:
+	
+	n * n
+
+ii) how to check if there is a tie and the time complexity
+	
+	Goes through the 2d array to see if it full, if it is
+	and there is no win, then there is a tie.
+	The time complexity is: 
+	
+	n * n
+
+iii) how to generate plays for the computer player and the time
+	complexity
+	
+	For the one that I did, I just used the user's current input, 
+	and find a space that adjacent to it, that is not empty, and 
+	place the computer's stone there. However, if there is not free
+	space along the user's most recent input, then the computer will
+	randomly place a stone at an empty position. So the time complexity
+	is:
+	
+	n * n ( worst case scenario)
+	
+	or
+	
+	n (best case scenario)
+	
+	I wanted to use minimax to implement the computer's move, but didn't
+	have the time. I think if the computer places a stone on the board and 
+	a score is given to that stone placement, based on the consecutive runs
+	the player and the computer will have individually. This will be able to 
+	minimize the player's score and maximize the computer's score. Since the computer 
+	will have to go through the whole board to find the best spot, I think the
+	time complexity for that one would have been:
+	
+	n * n
